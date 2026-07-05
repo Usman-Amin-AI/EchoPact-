@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga" 1, "calt" 1;  /* enable ligatures */
+}
+
+
+/* Orb Styling */
+.orb {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-orb {
+  animation: wave 0.4s infinite ease-in-out;
+}
+
+.animate-orb-slow {
+  animation: wave 2s infinite ease-in-out;
+}
+
+.orb-active.inbound {
+  background: radial-gradient(circle at center, #7ab8ff, #4a90e2, #2171cc);
+}
+
+.orb-active.outbound {
+  background: radial-gradient(circle at center, #ff7a7a, #e24a4a, #cc2121);
+}
+
+.orb-inactive.inbound {
+  background: radial-gradient(circle at center,
+    rgba(122, 184, 255, 0.3),
+    rgba(74, 144, 226, 0.2),
+    rgba(33, 113, 204, 0.1));
+}
+
+.orb-inactive.outbound {
+  background: radial-gradient(circle at center,
+    rgba(255, 122, 122, 0.3),
+    rgba(226, 74, 74, 0.2),
+    rgba(204, 33, 33, 0.1));
+}
+
+/* Inner Gradient Layer for Waving Effect */
+.orb::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+
+  border-radius: 50%;
+  animation: wave-motion 6s infinite linear;
+}
+
+/* Keyframes for Waving Animation */
+@keyframes wave {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+}
+
+@keyframes wave-motion {
+  0% {
+      transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+      transform: translate(10px, 10px) rotate(180deg);
+  }
+  100% {
+      transform: translate(0, 0) rotate(360deg);
+  }
+}

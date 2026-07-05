@@ -1,0 +1,4 @@
+# ECHOPACT runtime requirements
+# This project is built with Node.js and npm.
+nodejs>=20.0.0
+npm>=10.0.0

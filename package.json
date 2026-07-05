@@ -1,0 +1,45 @@
+{
+  "name": "echopact",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Usman Amin",
+  "scripts": {
+    "dev": "next dev --turbopack --port 3003",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@11labs/client": "^0.0.7",
+    "@opentelemetry/api": "^1.9.0",
+    "@posthog/ai": "^3.2.1",
+    "@radix-ui/react-slot": "^1.1.2",
+    "audiomotion-analyzer": "^4.5.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.4.7",
+    "ggwave": "^0.4.0",
+    "groq-sdk": "^0.15.0",
+    "next": "15.1.7",
+    "openai": "^4.85.3",
+    "posthog-node": "^4.7.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7",
+    "jest": "^30.4.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "ts-jest": "^29.4.11",
+    "typescript": "^5"
+  }
+}
